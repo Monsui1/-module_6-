@@ -1,29 +1,15 @@
-//Пример 1
-
-function isPalindrome(Довод) {
-    Довод = Довод.replace(/\s/g, '');
+function isPalindrome(string) {
+    let clearString = string.replace(/\s/g, '').toLowerCase();
     
-    if (Довод.toLowerCase() === Довод.toLowerCase().split('').reverse().join('')) {
-        console.log(`Слово ${Довод} является палиндромом`);
+    if (clearString === clearString.split('').reverse().join('')) {
+        return `Слово ${string} является палиндромом`;
     } else {
-        console.log(`Слово ${Довод} не является палиндромом`);
+        return `Слово ${string} не является палиндромом`;
     }
 }
 
-let Довод = "Довод";
-isPalindrome(Довод);
+let dovod = "Довод";
+let santiment = "Сантимент";
 
-//Пример 2
-
-function isPalindrome(Сантимент) {
-    Сантимент = Сантимент.replace(/\s/g, '');
-    
-    if (Сантимент.toLowerCase() === Сантимент.toLowerCase().split('').reverse().join('')) {
-        console.log(`Слово ${Сантимент} является палиндромом`);
-    } else {
-        console.log(`Слово ${Сантимент} не является палиндромом`);
-    }
-}
-
-let Сантимент = "Сантимент";
-isPalindrome(Сантимент);
+console.log(isPalindrome(dovod));
+console.log(isPalindrome(santiment));
